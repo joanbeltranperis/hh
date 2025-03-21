@@ -115,7 +115,7 @@ def fetch_store_data(store_id, marker):
         return
 
     except Exception:
-        print("Error fetching store data for store ID, trying dealer endpoint.")
+        print("Error fetching store data, trying dealer endpoint.")
         pass
 
     try:
