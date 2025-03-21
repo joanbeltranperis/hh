@@ -41,13 +41,12 @@ MAP_PARAMS = {
 
 FIELDS = [
     "name",
-    "address",
-    "has_enabled_affiliate",
     "phone",
+    "address",
     "city",
+    "zip",
     "state",
     "country",
-    "zip",
     "website_url",
     "maps_url",
     "lat",
@@ -56,13 +55,12 @@ FIELDS = [
 
 HEADERS = {
     "name": "Nombre de la tienda",
-    "address": "Dirección",
-    "has_enabled_affiliate": "Afiliado",
     "phone": "Teléfono",
+    "address": "Dirección",
     "city": "Ciudad",
+    "zip": "Código postal",
     "state": "Provincia",
     "country": "País",
-    "zip": "Código postal",
     "website_url": "Página web",
     "maps_url": "Google Maps",
     "lat": "Latitud",
