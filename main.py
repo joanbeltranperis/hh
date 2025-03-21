@@ -3,6 +3,7 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
+from tqdm import tqdm
 
 BASE_URL = "https://helly-hansen.locally.com"
 MAP_ENDPOINT = f"{BASE_URL}/stores/conversion_data"
@@ -176,8 +177,9 @@ def main():
 
     with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
+        all_boxes = list(generate_bounding_boxes())
 
-        for box in generate_bounding_boxes():
+        for box in tqdm(all_boxes, desc="Fetching data"):
             url = build_map_url(box)
 
             try:
