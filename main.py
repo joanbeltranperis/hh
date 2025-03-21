@@ -205,11 +205,9 @@ def main():
 
                 store_html = marker.get("store_html", "")
                 website_url, maps_url = extract_urls_from_html(store_html)
-                affiliate = marker.get("has_enabled_affiliate", "")
 
                 marker["website_url"] = website_url
                 marker["maps_url"] = maps_url
-                marker["has_enabled_affiliate"] = affiliate
 
                 if not wrote_header:
                     write_csv_header(writer)
