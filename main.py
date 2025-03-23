@@ -49,8 +49,6 @@ FIELDS = [
     "country",
     "website_url",
     "maps_url",
-    "lat",
-    "lng",
 ]
 
 HEADERS = {
@@ -63,8 +61,6 @@ HEADERS = {
     "country": "País",
     "website_url": "Página web",
     "maps_url": "Google Maps",
-    "lat": "Latitud",
-    "lng": "Longitud",
 }
 
 
