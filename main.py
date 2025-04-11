@@ -1,8 +1,9 @@
-import time
 import csv
+import time
+from urllib.parse import urlencode
+
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlencode
 from tqdm import tqdm
 
 BASE_URL = "https://helly-hansen.locally.com"
@@ -10,8 +11,18 @@ MAP_ENDPOINT = f"{BASE_URL}/stores/conversion_data"
 STORE_ENDPOINT = f"{BASE_URL}/conversion/location/store/{{store_id}}?company_id=58&only_retailer_id=&service=store-locator&lang=en-us"
 DEALER_ENDPOINT = f"{BASE_URL}/conversion/location/dealer/{{store_id}}?company_id=58&only_retailer_id=&service=store-locator&lang=en-us"
 
-LATITUDE_RANGES = [(47.0, 30.0), (30, 27), (32.75, 32.75), (38.5, 38.5)]
-LONGITUDE_RANGES = [(-13.0, 8.0), (-20, -12), (-17, -17), (-28.5, -28.5)]
+LATITUDE_RANGES = [
+    (47.0, 30.0),
+    (30, 27),
+    (32.75, 32.75),
+    (38.5, 38.5),
+]
+LONGITUDE_RANGES = [
+    (-13.0, 8.0),
+    (-20, -12),
+    (-17, -17),
+    (-28.5, -28.5),
+]
 
 BOX_SIZE = 1.5
 OUTPUT_FILE = "helly_hansen_stores.csv"
